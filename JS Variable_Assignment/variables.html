@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable</title>
+</head>
+<body>
+    <script>
+        let x = null;
+        let name = "Bhushan";
+        const found = false;
+
+        console.log(name,x,found); // Bhushan null false
+
+        var a;
+        console.log(a); // undefined
+
+        let y;
+        console.log(y); // undefined
+
+        // const f;  // Uncaught SyntaxError : Missing initializer in const
+
+        const f = 10;
+        console.log(f); // 10
+
+
+        name = "Ram";
+        console.log(name);
+
+        a = 20;
+        console.log(a);
+
+        y = 30;
+        console.log(y);
+
+        // => Hello world!
+        document.write('Hello World in different way');
+
+        // console 
+        console.log('Hello World');
+
+        // => Hello QuickRef.ME
+        console.warn('hello %s','QuickRef.ME');
+
+        // Prints error message to stderr
+        console.error(new Error('Oops!'));
+
+        
+    </script>
+</body>
+</html>

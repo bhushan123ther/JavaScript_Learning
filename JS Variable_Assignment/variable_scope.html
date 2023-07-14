@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable Scope</title>
+</head>
+
+<body>
+    <script>
+        /* var - can have global or local scope
+
+           var - can be redeclared and reassigned.
+        */
+        // global scope
+        var number = 50;
+        function print() {
+            var square = number * number;
+            console.log(square);
+        }
+
+        console.log(number);  // 50
+        print() // 2500
+
+
+        // local scope
+        function printb() {
+            var n = 10;
+            var square = n * n;
+            console.log(square);
+        }
+        printb();  // 100
+        // console.log(n) // ReferenceError : number is not defined
+
+
+        var num;
+        console.log(num);  // undefined
+
+        // Here, we're not redeclaring – rather, we're reassigning.
+        var number = 50
+        console.log(number)   // 50
+
+        number = 100
+        console.log(number) // 100
+
+        number = 200
+        console.log(number) // 200
+
+
+        /* 
+         let - can be reassigned to other values but they cannot be redecalared.
+        */
+        let number1 = 50;
+        console.log("let number1 = ", number1);
+
+        number1 = 100
+        console.log("number1 = " + number1);
+
+        // Here, we're not redeclaring – rather, we're reassigning.
+
+        let number2 = 50
+        //  let number2 = 100 // SyntaxError : Identifier 'number2' has already been declared
+
+        // function print() {
+        //     let square = number * number
+
+        //     let number = 50
+        // }
+
+        print()
+// ReferenceError: Cannot access 'number' before initialization
+
+   /*
+       const - are similar to let in regards to scope.
+       such variables can have a global,local, or block scope.
+   */
+
+   const number3 = 50
+
+   function display()
+   {
+      const sqr = number3 * number3
+
+      if(number3 < 60)
+      {
+         var largerNumber = 80
+         const anotherLargerNumber = 100
+
+         console.log(sqr)
+      }
+
+      console.log(largerNumber);
+      // console.log(anotherLargerNumber) //variable_scope.html:94  Uncaught ReferenceError: anotherLargerNumber is not defined
+   }
+
+   display()
+ // 2500
+ // 80
+ // ReferenceError: anotherLargerNumber is not defined
+    
+    //In this regard, const is different from var and let. const is used for declaring constant variables – which are variables with values that cannot be changed.
+
+    const a = 50
+    a = 300  //variable_scope.html:105  Uncaught TypeError: Assignment to constant variable.
+
+    console.log("const a = ",a);
+    
+    </script>
+</body>
+
+</html>
