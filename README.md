@@ -1,1 +1,2 @@
 # JavaScript_Learning
+JavaScript is a versatile programming language that adds interactivity and dynamic behavior to web pages. It runs on the client-side, meaning it is executed by the user's web browser. JavaScript enables developers to create interactive elements, handle user input, validate forms, manipulate and modify HTML and CSS, make API calls, and perform various actions in response to events. It plays a crucial role in creating engaging and interactive web applications.
